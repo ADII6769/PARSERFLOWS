@@ -1,0 +1,617 @@
+{
+  "users": [
+    {
+      "id": "uid_w495xivzbmuyhdmk2",
+      "email": "testuser@parseflow.ai",
+      "passwordHash": "$2b$10$jtlYBVfqd4SKzASdEkFDDOw6rl6P/4GywA0132yWACXygpK3K2wyC",
+      "fullName": "Test Scientist",
+      "avatar": "https://api.dicebear.com/7.x/shapes/svg?seed=Test%20Scientist",
+      "createdAt": "2026-10-07T19:08:39.410Z",
+      "updatedAt": "2026-10-07T19:08:39.410Z",
+      "storageUsedBytes": 0,
+      "documentsProcessed": 0,
+      "pagesProcessed": 0,
+      "preferences": {
+        "ocrEngine": "tesseract",
+        "theme": "dark",
+        "autoProcess": true,
+        "confidenceThreshold": 0.85
+      }
+    }
+  ],
+  "documents": [
+    {
+      "id": "demo_vmpltvj",
+      "user_id": "uid_w495xivzbmuyhdmk2",
+      "filename": "demo_quantum_lecture_scanned.png",
+      "original_name": "DEMO: Scanned Lecture Notes & AVL Tree Derivation.pdf",
+      "mime_type": "image/png",
+      "file_size": 485120,
+      "file_path": "",
+      "document_type": "SCANNED_MULTIMODAL",
+      "is_scanned": true,
+      "page_count": 1,
+      "status": "REVIEW",
+      "confidence_score": 0.89,
+      "confidence_rating": "HIGH",
+      "processing_time_ms": 1240,
+      "warnings_count": 2,
+      "blocks_count": 7,
+      "tables_count": 1,
+      "visuals_count": 4,
+      "summary": "DEMO DATA: Scanned multimodal document demonstrating OCR, handwritten C++ code, mathematical LaTeX equations, structured table extraction, and flagged marginal annotations.",
+      "markdown_content": "# DEMO: Scanned Lecture Notes & AVL Tree Derivation\n\n---\n*Page 1*\n\n## CS-892: Advanced Data Structures & Quantum Derivations\n\nLecture Notes Section 4: Self-Balancing Binary Search Trees and State Space Rotations. We demonstrate rebalancing criteria following node insertions in log(n) depth.\n\n```cpp\nint getBalance(Node* N) {\n    if (N == NULL) return 0;\n    return height(N->left) - height(N->right);\n}\n\nNode* rotateRight(Node* y) {\n    Node* x = y->left;\n    y->left = x->right;\n    x->right = y;\n    return x;\n}\n```\n\n> 📊 **[Diagram/Flow]**: AVL Rebalancing Rotation Schema: Left-Heavy subtree pivot [Node y] rotating right to pivot [Node x]. Balance factor restored to 0.\n\n$$\n|\\psi\\rangle = \\alpha|0\\rangle + \\beta|1\\rangle, \\quad \\text{where } |\\alpha|^2 + |\\beta|^2 = 1\n$$\n\n| Algorithm | Best Case | Average Case | Worst Case |\n|---|---|---|---|\n| AVL Tree Search | O(log n) | O(log n) | O(log n) |\n| AVL Insertion | O(log n) | O(log n) | O(log n) |\n| Unbalanced BST | O(1) | O(log n) | O(n) |\n\n> ✍️ **[Handwritten]**: Note on margin: Check phase sign delta for Hadamard transform gate?! (Uncertain stroke overlap)\n",
+      "json_twin": {
+        "metadata": {
+          "document_id": "demo_vmpltvj",
+          "filename": "DEMO: Scanned Lecture Notes & AVL Tree Derivation.pdf",
+          "document_type": "SCANNED_MULTIMODAL",
+          "is_scanned": true,
+          "page_count": 1,
+          "processed_at": "2026-10-07T19:08:47.119Z",
+          "confidence_score": 0.89,
+          "confidence_rating": "HIGH",
+          "demo_flag": true
+        },
+        "summary": "DEMO DATA: Multimodal demonstration document.",
+        "blocks": [
+          {
+            "block_id": "blk_demo_h1",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "heading",
+            "content": "CS-892: Advanced Data Structures & Quantum Derivations",
+            "bbox": [
+              60,
+              50,
+              920,
+              110
+            ],
+            "reading_order": 1,
+            "confidence": 0.98,
+            "confidence_type": "ocr",
+            "confidence_level": "HIGH",
+            "extractor": "tesseract_ocr",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                50,
+                920,
+                110
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "block_id": "blk_demo_p1",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "paragraph",
+            "content": "Lecture Notes Section 4: Self-Balancing Binary Search Trees and State Space Rotations. We demonstrate rebalancing criteria following node insertions in log(n) depth.",
+            "bbox": [
+              60,
+              125,
+              920,
+              210
+            ],
+            "reading_order": 2,
+            "confidence": 0.96,
+            "confidence_type": "ocr",
+            "confidence_level": "HIGH",
+            "extractor": "tesseract_ocr",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                125,
+                920,
+                210
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "block_id": "blk_demo_code",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "code",
+            "content": "int getBalance(Node* N) {\n    if (N == NULL) return 0;\n    return height(N->left) - height(N->right);\n}\n\nNode* rotateRight(Node* y) {\n    Node* x = y->left;\n    y->left = x->right;\n    x->right = y;\n    return x;\n}",
+            "bbox": [
+              60,
+              225,
+              520,
+              480
+            ],
+            "reading_order": 3,
+            "confidence": 0.93,
+            "confidence_type": "vision",
+            "confidence_level": "HIGH",
+            "extractor": "gemini_vision",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                225,
+                520,
+                480
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "block_id": "blk_demo_diag",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "diagram",
+            "content": "AVL Rebalancing Rotation Schema: Left-Heavy subtree pivot [Node y] rotating right to pivot [Node x]. Balance factor restored to 0.",
+            "bbox": [
+              540,
+              225,
+              920,
+              480
+            ],
+            "reading_order": 4,
+            "confidence": 0.89,
+            "confidence_type": "vision",
+            "confidence_level": "HIGH",
+            "extractor": "gemini_vision",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                540,
+                225,
+                920,
+                480
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "block_id": "blk_demo_eq",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "equation",
+            "content": "|\\psi\\rangle = \\alpha|0\\rangle + \\beta|1\\rangle, \\quad \\text{where } |\\alpha|^2 + |\\beta|^2 = 1",
+            "bbox": [
+              60,
+              500,
+              920,
+              590
+            ],
+            "reading_order": 5,
+            "confidence": 0.94,
+            "confidence_type": "vision",
+            "confidence_level": "HIGH",
+            "extractor": "gemini_vision",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                500,
+                920,
+                590
+              ]
+            },
+            "warnings": []
+          },
+          {
+            "block_id": "blk_demo_table",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "table",
+            "content": "| Algorithm | Best Case | Average Case | Worst Case |\n|---|---|---|---|\n| AVL Tree Search | O(log n) | O(log n) | O(log n) |\n| AVL Insertion | O(log n) | O(log n) | O(log n) |\n| Unbalanced BST | O(1) | O(log n) | O(n) |",
+            "bbox": [
+              60,
+              610,
+              920,
+              780
+            ],
+            "reading_order": 6,
+            "confidence": 0.97,
+            "confidence_type": "parser",
+            "confidence_level": "HIGH",
+            "extractor": "table_engine",
+            "verification": "VERIFIED",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                610,
+                920,
+                780
+              ]
+            },
+            "warnings": [],
+            "table_data": {
+              "headers": [
+                "Algorithm",
+                "Best Case",
+                "Average Case",
+                "Worst Case"
+              ],
+              "rows": [
+                [
+                  "AVL Tree Search",
+                  "O(log n)",
+                  "O(log n)",
+                  "O(log n)"
+                ],
+                [
+                  "AVL Insertion",
+                  "O(log n)",
+                  "O(log n)",
+                  "O(log n)"
+                ],
+                [
+                  "Unbalanced BST",
+                  "O(1)",
+                  "O(log n)",
+                  "O(n)"
+                ]
+              ]
+            }
+          },
+          {
+            "block_id": "blk_demo_handwriting_review",
+            "document_id": "demo_vmpltvj",
+            "page": 1,
+            "type": "handwriting",
+            "content": "Note on margin: Check phase sign delta for Hadamard transform gate?! (Uncertain stroke overlap)",
+            "bbox": [
+              60,
+              800,
+              920,
+              910
+            ],
+            "reading_order": 7,
+            "confidence": 0.58,
+            "confidence_type": "vision",
+            "confidence_level": "LOW",
+            "extractor": "gemini_vision",
+            "verification": "REVIEW",
+            "source": {
+              "page": 1,
+              "bbox": [
+                60,
+                800,
+                920,
+                910
+              ]
+            },
+            "warnings": [
+              "Character ambiguity detected in cursive handwriting",
+              "Uncertain stroke overlap on mathematical symbol"
+            ]
+          }
+        ],
+        "warnings": [
+          {
+            "block_id": "blk_demo_handwriting_review",
+            "page": 1,
+            "verification": "REVIEW",
+            "confidence": 0.58,
+            "warnings": [
+              "Character ambiguity detected in cursive handwriting",
+              "Uncertain stroke overlap on mathematical symbol"
+            ]
+          }
+        ]
+      },
+      "created_at": "2026-10-07T19:08:47.119Z",
+      "updated_at": "2026-10-07T19:08:47.119Z",
+      "is_demo": true
+    }
+  ],
+  "pages": [
+    {
+      "id": "page_demo_vmpltvj_1",
+      "document_id": "demo_vmpltvj",
+      "page_number": 1,
+      "width": 1000,
+      "height": 1000,
+      "has_handwriting": true,
+      "has_tables": true,
+      "has_images": true,
+      "is_scanned": true,
+      "text_density": "high",
+      "block_count": 7
+    }
+  ],
+  "blocks": [
+    {
+      "block_id": "blk_demo_h1",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "heading",
+      "content": "CS-892: Advanced Data Structures & Quantum Derivations",
+      "bbox": [
+        60,
+        50,
+        920,
+        110
+      ],
+      "reading_order": 1,
+      "confidence": 0.98,
+      "confidence_type": "ocr",
+      "confidence_level": "HIGH",
+      "extractor": "tesseract_ocr",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          50,
+          920,
+          110
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "block_id": "blk_demo_p1",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "paragraph",
+      "content": "Lecture Notes Section 4: Self-Balancing Binary Search Trees and State Space Rotations. We demonstrate rebalancing criteria following node insertions in log(n) depth.",
+      "bbox": [
+        60,
+        125,
+        920,
+        210
+      ],
+      "reading_order": 2,
+      "confidence": 0.96,
+      "confidence_type": "ocr",
+      "confidence_level": "HIGH",
+      "extractor": "tesseract_ocr",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          125,
+          920,
+          210
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "block_id": "blk_demo_code",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "code",
+      "content": "int getBalance(Node* N) {\n    if (N == NULL) return 0;\n    return height(N->left) - height(N->right);\n}\n\nNode* rotateRight(Node* y) {\n    Node* x = y->left;\n    y->left = x->right;\n    x->right = y;\n    return x;\n}",
+      "bbox": [
+        60,
+        225,
+        520,
+        480
+      ],
+      "reading_order": 3,
+      "confidence": 0.93,
+      "confidence_type": "vision",
+      "confidence_level": "HIGH",
+      "extractor": "gemini_vision",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          225,
+          520,
+          480
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "block_id": "blk_demo_diag",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "diagram",
+      "content": "AVL Rebalancing Rotation Schema: Left-Heavy subtree pivot [Node y] rotating right to pivot [Node x]. Balance factor restored to 0.",
+      "bbox": [
+        540,
+        225,
+        920,
+        480
+      ],
+      "reading_order": 4,
+      "confidence": 0.89,
+      "confidence_type": "vision",
+      "confidence_level": "HIGH",
+      "extractor": "gemini_vision",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          540,
+          225,
+          920,
+          480
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "block_id": "blk_demo_eq",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "equation",
+      "content": "|\\psi\\rangle = \\alpha|0\\rangle + \\beta|1\\rangle, \\quad \\text{where } |\\alpha|^2 + |\\beta|^2 = 1",
+      "bbox": [
+        60,
+        500,
+        920,
+        590
+      ],
+      "reading_order": 5,
+      "confidence": 0.94,
+      "confidence_type": "vision",
+      "confidence_level": "HIGH",
+      "extractor": "gemini_vision",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          500,
+          920,
+          590
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "block_id": "blk_demo_table",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "table",
+      "content": "| Algorithm | Best Case | Average Case | Worst Case |\n|---|---|---|---|\n| AVL Tree Search | O(log n) | O(log n) | O(log n) |\n| AVL Insertion | O(log n) | O(log n) | O(log n) |\n| Unbalanced BST | O(1) | O(log n) | O(n) |",
+      "bbox": [
+        60,
+        610,
+        920,
+        780
+      ],
+      "reading_order": 6,
+      "confidence": 0.97,
+      "confidence_type": "parser",
+      "confidence_level": "HIGH",
+      "extractor": "table_engine",
+      "verification": "VERIFIED",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          610,
+          920,
+          780
+        ]
+      },
+      "warnings": [],
+      "table_data": {
+        "headers": [
+          "Algorithm",
+          "Best Case",
+          "Average Case",
+          "Worst Case"
+        ],
+        "rows": [
+          [
+            "AVL Tree Search",
+            "O(log n)",
+            "O(log n)",
+            "O(log n)"
+          ],
+          [
+            "AVL Insertion",
+            "O(log n)",
+            "O(log n)",
+            "O(log n)"
+          ],
+          [
+            "Unbalanced BST",
+            "O(1)",
+            "O(log n)",
+            "O(n)"
+          ]
+        ]
+      }
+    },
+    {
+      "block_id": "blk_demo_handwriting_review",
+      "document_id": "demo_vmpltvj",
+      "page": 1,
+      "type": "handwriting",
+      "content": "Note on margin: Check phase sign delta for Hadamard transform gate?! (Uncertain stroke overlap)",
+      "bbox": [
+        60,
+        800,
+        920,
+        910
+      ],
+      "reading_order": 7,
+      "confidence": 0.58,
+      "confidence_type": "vision",
+      "confidence_level": "LOW",
+      "extractor": "gemini_vision",
+      "verification": "REVIEW",
+      "source": {
+        "page": 1,
+        "bbox": [
+          60,
+          800,
+          920,
+          910
+        ]
+      },
+      "warnings": [
+        "Character ambiguity detected in cursive handwriting",
+        "Uncertain stroke overlap on mathematical symbol"
+      ]
+    }
+  ],
+  "jobs": [],
+  "qa_history": [
+    {
+      "id": "qa_8h5mx8m",
+      "document_id": "demo_vmpltvj",
+      "user_id": "uid_w495xivzbmuyhdmk2",
+      "question": "What is the time complexity of AVL insertion?",
+      "answer": "I couldn't find sufficient evidence in this document.",
+      "citations": [],
+      "created_at": "2026-10-07T19:08:55.153Z"
+    },
+    {
+      "id": "qa_mdgak4w",
+      "document_id": "demo_vmpltvj",
+      "user_id": "uid_w495xivzbmuyhdmk2",
+      "question": "What is the time complexity of AVL insertion?",
+      "answer": "Direct evidence retrieved from \"DEMO: Scanned Lecture Notes & AVL Tree Derivation.pdf\":\n\nAccording to [Page 1, Block blk_demo_table] (table):\n\"| Algorithm | Best Case | Average Case | Worst Case |\n|---|---|---|---|\n| AVL Tree Search | O(log n) | O(log n) | O(log n) |\n| AVL Insertion | O(log n) | O(log n) | O(log n) |\n| Unbalanced BST | O(1) | O(log n) | O(n) |\"\n\nAccording to [Page 1, Block blk_demo_p1] (paragraph):\n\"Lecture Notes Section 4: Self-Balancing Binary Search Trees and State Space Rotations. We demonstrate rebalancing criteria following node insertions in log(n) depth.\"\n\nAccording to [Page 1, Block blk_demo_diag] (diagram):\n\"AVL Rebalancing Rotation Schema: Left-Heavy subtree pivot [Node y] rotating right to pivot [Node x]. Balance factor restored to 0.\"",
+      "citations": [
+        {
+          "page": 1,
+          "block_id": "blk_demo_table",
+          "snippet": "| Algorithm | Best Case | Average Case | Worst Case |\n|---|---|---|---|\n| AVL Tree Search | O(log n) | O(log n) | O(log n) |\n| AVL Insertion",
+          "bbox": [
+            60,
+            610,
+            920,
+            780
+          ]
+        },
+        {
+          "page": 1,
+          "block_id": "blk_demo_p1",
+          "snippet": "Lecture Notes Section 4: Self-Balancing Binary Search Trees and State Space Rotations. We demonstrate rebalancing criteria following node in",
+          "bbox": [
+            60,
+            125,
+            920,
+            210
+          ]
+        },
+        {
+          "page": 1,
+          "block_id": "blk_demo_diag",
+          "snippet": "AVL Rebalancing Rotation Schema: Left-Heavy subtree pivot [Node y] rotating right to pivot [Node x]. Balance factor restored to 0.",
+          "bbox": [
+            540,
+            225,
+            920,
+            480
+          ]
+        }
+      ],
+      "created_at": "2026-10-07T19:10:31.388Z"
+    }
+  ]
+}
