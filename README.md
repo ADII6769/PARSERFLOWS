@@ -63,3 +63,5 @@ npm start
 docker-compose up --build
 ```
 Access the application on port `3000`.
+
+https://aistudio.google.com/u/2/apps/cc0da76d-379e-47ad-8922-bb913e15e007?pli=1&showAssistant=true&showPreview=true
